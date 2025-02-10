@@ -16,7 +16,6 @@ public class CharDemo {
             System.out.println(i + " = " + (char)i);
         }
 
-
     }
 
 }
