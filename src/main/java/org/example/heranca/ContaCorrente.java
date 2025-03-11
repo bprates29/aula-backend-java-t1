@@ -10,6 +10,10 @@ public class ContaCorrente extends ContaBancaria {
         this.taxaOperacao = taxaOperacao;
     }
 
+    public double getTaxaOperacao() {
+        return taxaOperacao;
+    }
+
     @Override
     public void sacar(double valor) {
         double valorTotal = valor + taxaOperacao;

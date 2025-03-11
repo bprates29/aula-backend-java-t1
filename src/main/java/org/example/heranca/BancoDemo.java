@@ -10,9 +10,11 @@ public class BancoDemo {
         System.out.println("===============================");
         ContaPoupanca cp = new ContaPoupanca("José", 500.0, 2.5);
         cp.exibirInformacoes();
+        cp.depositar(100.0);
         cp.aplicarRendimento();
         cp.exibirInformacoes();
 
-
+        ContaBancaria cb = new ContaBancaria("Fulano", 1000.0);
+        cb.exibirInformacoes();
     }
 }
