@@ -32,4 +32,20 @@ public class ContaCorrente extends ContaBancaria {
         super.exibirInformacoes();
         System.out.println("Taxa de operação: R$" + taxaOperacao);
     }
+
+    @Override
+    public double calcularTaxaEspecial() {
+        if (getSaldo() > 50000) {
+            return 10.0;
+        }
+        return 5.0;
+    }
+
+    //Erro de compilação;
+//    @Override
+//    public final void inicializarRocursosEspeciais() {
+//        super.exibirInformacoes();
+//        System.out.println("Taxa de operação: R$" + taxaOperacao);
+//    }
+
 }

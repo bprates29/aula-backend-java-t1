@@ -1,6 +1,6 @@
 package org.example.heranca;
 
-public class ContaBancaria {
+public abstract class ContaBancaria {
     private String titular;
     private double saldo;
 
@@ -46,5 +46,12 @@ public class ContaBancaria {
     public void exibirInformacoes() {
         System.out.println("Titular: " + titular);
         System.out.println("Saldo: R$" + saldo);
+    }
+
+    public abstract double calcularTaxaEspecial();
+
+    public final void inicializarRocursosEspeciais() {
+        // Lógica critica que não deve ser alterada
+        System.out.println("Inicialização segura de recursos para a conta.");
     }
 }
