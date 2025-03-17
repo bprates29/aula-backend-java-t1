@@ -1,5 +1,10 @@
 package org.example;
 
+import org.example.interfaces.GerenciadorDeContas;
+import org.example.interfaces.RegistroAuditoria;
+import org.example.interfaces.RegistroAuditoriaCompleta;
+import org.example.interfaces.RegistroAuditoriaSimples;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
@@ -9,6 +14,11 @@ public class Main {
         quadrado(idade);
 
         System.out.printf("Hello and welcome!");
+
+        GerenciadorDeContas gerenciadorDeContasSimples = new GerenciadorDeContas(
+                new RegistroAuditoriaSimples());
+        GerenciadorDeContas gerenciadorDeContasCompleta = new GerenciadorDeContas(
+                new RegistroAuditoriaCompleta());
 
     }
 

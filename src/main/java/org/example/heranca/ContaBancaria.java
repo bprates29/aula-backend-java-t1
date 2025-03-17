@@ -1,5 +1,6 @@
 package org.example.heranca;
 
+
 public abstract class ContaBancaria {
     private String titular;
     private double saldo;
@@ -14,6 +15,10 @@ public abstract class ContaBancaria {
     }
 
     public void setTitular(String titular) {
+        this.titular = titular;
+    }
+
+    public void alterarTitular(String titular) {
         this.titular = titular;
     }
 
@@ -35,12 +40,16 @@ public abstract class ContaBancaria {
     }
 
     public void sacar(double valor) {
-        if (valor > 0 && valor <= saldo) {
+        if (isValid(valor)) {
             saldo -= valor;
             System.out.println("Saque de R$" + valor + " realizado;");
         } else {
             System.out.println("Salfo insuficiente, ou valor inválido");
         }
+    }
+
+    private boolean isValid(double valor) {
+        return valor > 0 && valor <= saldo;
     }
 
     public void exibirInformacoes() {
